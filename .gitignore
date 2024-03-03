@@ -1,0 +1,8 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/new-google-tab-chrome-extension/FileContentIndex/4fef2c33-dd65-412e-b76b-06aebebf9a7b.vsidx
+*.vsidx
+/.vs/ProjectSettings.json
+/.vs/slnx.sqlite
