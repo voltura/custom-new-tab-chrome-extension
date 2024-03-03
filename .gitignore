@@ -6,3 +6,4 @@
 *.vsidx
 /.vs/ProjectSettings.json
 /.vs/slnx.sqlite
+/.vs
