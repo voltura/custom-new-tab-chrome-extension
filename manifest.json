@@ -1,14 +1,14 @@
 {
 	"name": "Open custom new tab",
 	"version": "0.2.0.0",
-	"description": "Press Ctrl + Z to open a custom page in a new tab. Bypasses any corporate GPO's that forces new tabs to load a specific page.",
+	"description": "Press Ctrl + M to open a custom page in a new tab. Bypasses any corporate GPO's that forces new tabs to load a specific page.",
 	"background": {
-		"service_worker": "service-worker.js"
+		"service_worker": "javascript/service-worker.js"
 	},
 	"commands": {
 		"open_custom_tab": {
 			"suggested_key": {
-				"default": "Ctrl+Z"
+				"default": "Ctrl+M"
 			},
 			"description": "Open a custom new tab"
 		}
@@ -18,15 +18,15 @@
 		"http://*/*"
 	],
 	"icons": {
-		"32": "favicon.png",
-		"128": "128.png"
+		"32": "images/favicon.png",
+		"128": "images/128.png"
 	},
 	"action": {
-		"default_popup": "popup.html",
-		"default_title": "Custom Tab"
+		"default_popup": "html/popup.html",
+		"default_title": "Custom Tab Extension"
 	},
 	"options_ui": {
-		"page": "options.html",
+		"page": "html/index.html",
 		"open_in_tab": true
 	},
 	"content_security_policy": {
@@ -36,7 +36,9 @@
 		{
 			"resources": [
 				"css/*",
-				"*"
+				"html/*",
+				"images/*",
+				"javascript/*"
 			],
 			"matches": [
 				"<all_urls>"

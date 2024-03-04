@@ -1,6 +1,8 @@
-const storage = chrome.storage.local;
-const saveButton = document.querySelector('button.save');
-const customTabUrl = document.querySelector('input');
+const
+	storage = chrome.storage.local,
+	saveButton = document.querySelector('button.save'),
+	customTabUrl = document.querySelector('input');
+	
 let messageClearTimer;
 
 loadChanges();
@@ -26,7 +28,6 @@ function loadChanges() {
 	storage.get('customTabUrl', function (items) {
 		if (items.customTabUrl) {
 			customTabUrl.value = items.customTabUrl;
-			message('Loaded saved settings');
 		} else {
 			customTabUrl.value = 'chrome://newtab';
 		}

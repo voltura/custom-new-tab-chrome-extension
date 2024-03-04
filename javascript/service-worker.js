@@ -19,7 +19,7 @@ chrome.commands.onCommand.addListener(async function (command) {
 });
 
 chrome.runtime.onInstalled.addListener(() => {
-	const indexPageUrl = chrome.runtime.getURL("index.html");
+	const indexPageUrl = chrome.runtime.getURL("/html/index.html");
 	chrome.tabs.create({
 		url: indexPageUrl
 	});
@@ -36,6 +36,6 @@ chrome.storage.onChanged.addListener((changes, namespace) => {
 chrome.action.onClicked.addListener(tab => {
   chrome.scripting.executeScript({
     target: {tabId: tab.id},
-    files: ['silentoptions.js'],
+    files: ['/javascript/silentoptions.js'],
   });
 });
